@@ -1,0 +1,96 @@
+﻿@model IEnumerable<MVCDataparambyAPI.Models.Dataparam>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2 class="my-4">Dataparam</h2>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary mb-3">Create New</a>
+</p>
+
+@{
+    if (TempData["insert_message"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Success!</strong> @TempData["insert_message"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+    if (TempData["update_message"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Success!</strong> @TempData["update_message"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+    if (TempData["delete_message"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Success!</strong> @TempData["delete_message"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+}
+
+<table class="table table-bordered table-hover table-striped align-middle">
+    <thead class="table-dark text-center" style="text-transform: capitalize;">
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.did)</th>
+            <th>@Html.DisplayNameFor(model => model.meterId)</th>
+            <th>@Html.DisplayNameFor(model => model.dtrid)</th>
+            <th>@Html.DisplayNameFor(model => model.rtc)</th>
+            <th>@Html.DisplayNameFor(model => model.currentRphase)</th>
+            <th>@Html.DisplayNameFor(model => model.currentYphase)</th>
+            <th>@Html.DisplayNameFor(model => model.currentBphase)</th>
+            <th>@Html.DisplayNameFor(model => model.powerAlert)</th>
+            <th>@Html.DisplayNameFor(model => model.srlcdoorsStatus)</th>
+            <th>@Html.DisplayNameFor(model => model.oilLevel)</th>
+            <th>@Html.DisplayNameFor(model => model.srlcoilLevel)</th>
+            <th>@Html.DisplayNameFor(model => model.srlcoilTemperature)</th>
+            <th>@Html.DisplayNameFor(model => model.srlcsurfaceTemperature)</th>
+            <th>@Html.DisplayNameFor(model => model.srlcambtemperature)</th>
+            <th>@Html.DisplayNameFor(model => model.relayAlert)</th>
+            <th>@Html.DisplayNameFor(model => model.l1voltageVrn)</th>
+            <th>@Html.DisplayNameFor(model => model.l2voltageVyn)</th>
+            <th>@Html.DisplayNameFor(model => model.l3voltageVbn)</th>
+            <th>@Html.DisplayNameFor(model => model.frequency)</th>
+            <th>@Html.DisplayNameFor(model => model.status)</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.did)</td>
+                <td>@Html.DisplayFor(modelItem => item.meterId)</td>
+                <td>@Html.DisplayFor(modelItem => item.dtrid)</td>
+                <td>@Html.DisplayFor(modelItem => item.rtc)</td>
+                <td>@Html.DisplayFor(modelItem => item.currentRphase)</td>
+                <td>@Html.DisplayFor(modelItem => item.currentYphase)</td>
+                <td>@Html.DisplayFor(modelItem => item.currentBphase)</td>
+                <td>@Html.DisplayFor(modelItem => item.powerAlert)</td>
+                <td>@Html.DisplayFor(modelItem => item.srlcdoorsStatus)</td>
+                <td>@Html.DisplayFor(modelItem => item.oilLevel)</td>
+                <td>@Html.DisplayFor(modelItem => item.srlcoilLevel)</td>
+                <td>@Html.DisplayFor(modelItem => item.srlcoilTemperature)</td>
+                <td>@Html.DisplayFor(modelItem => item.srlcsurfaceTemperature)</td>
+                <td>@Html.DisplayFor(modelItem => item.srlcambtemperature)</td>
+                <td>@Html.DisplayFor(modelItem => item.relayAlert)</td>
+                <td>@Html.DisplayFor(modelItem => item.l1voltageVrn)</td>
+                <td>@Html.DisplayFor(modelItem => item.l2voltageVyn)</td>
+                <td>@Html.DisplayFor(modelItem => item.l3voltageVbn)</td>
+                <td>@Html.DisplayFor(modelItem => item.frequency)</td>
+                <td>@Html.DisplayFor(modelItem => item.status)</td>
+                <td class="text-center">
+                    <a asp-action="Edit" asp-route-did="@item.did" class="btn btn-sm btn-warning btn-block" style="min-width: 80px;">Edit</a>
+                    <a asp-action="Details" asp-route-did="@item.did" class="btn btn-sm btn-info btn-block" style="min-width: 80px;">Details</a>
+                    <a asp-action="Delete" asp-route-did="@item.did" class="btn btn-sm btn-danger btn-block" style="min-width: 80px;">Delete</a>
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>

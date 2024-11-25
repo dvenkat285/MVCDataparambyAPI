@@ -1,0 +1,147 @@
+﻿@model MVCDataparambyAPI.Models.Dataparam
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2 class="mb-4">Create Dataparam</h2>
+
+<h4>Enter Dataparam Details</h4>
+<hr />
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+
+            <div class="mb-3">
+                <label asp-for="did" class="form-label"></label>
+                <input asp-for="did" class="form-control" />
+                <span asp-validation-for="did" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="meterId" class="form-label"></label>
+                <input asp-for="meterId" class="form-control" />
+                <span asp-validation-for="meterId" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="dtrid" class="form-label"></label>
+                <input asp-for="dtrid" class="form-control" />
+                <span asp-validation-for="dtrid" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="rtc" class="form-label"></label>
+                <input asp-for="rtc" class="form-control" />
+                <span asp-validation-for="rtc" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="currentRphase" class="form-label"></label>
+                <input asp-for="currentRphase" class="form-control" />
+                <span asp-validation-for="currentRphase" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="currentYphase" class="form-label"></label>
+                <input asp-for="currentYphase" class="form-control" />
+                <span asp-validation-for="currentYphase" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="currentBphase" class="form-label"></label>
+                <input asp-for="currentBphase" class="form-control" />
+                <span asp-validation-for="currentBphase" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="powerAlert" class="form-label"></label>
+                <input asp-for="powerAlert" class="form-control" />
+                <span asp-validation-for="powerAlert" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="srlcdoorsStatus" class="form-label"></label>
+                <input asp-for="srlcdoorsStatus" class="form-control" />
+                <span asp-validation-for="srlcdoorsStatus" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="oilLevel" class="form-label"></label>
+                <input asp-for="oilLevel" class="form-control" />
+                <span asp-validation-for="oilLevel" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="srlcoilLevel" class="form-label"></label>
+                <input asp-for="srlcoilLevel" class="form-control" />
+                <span asp-validation-for="srlcoilLevel" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="srlcoilTemperature" class="form-label"></label>
+                <input asp-for="srlcoilTemperature" class="form-control" />
+                <span asp-validation-for="srlcoilTemperature" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="srlcsurfaceTemperature" class="form-label"></label>
+                <input asp-for="srlcsurfaceTemperature" class="form-control" />
+                <span asp-validation-for="srlcsurfaceTemperature" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="srlcambtemperature" class="form-label"></label>
+                <input asp-for="srlcambtemperature" class="form-control" />
+                <span asp-validation-for="srlcambtemperature" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="relayAlert" class="form-label"></label>
+                <input asp-for="relayAlert" class="form-control" />
+                <span asp-validation-for="relayAlert" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="l1voltageVrn" class="form-label"></label>
+                <input asp-for="l1voltageVrn" class="form-control" />
+                <span asp-validation-for="l1voltageVrn" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="l2voltageVyn" class="form-label"></label>
+                <input asp-for="l2voltageVyn" class="form-control" />
+                <span asp-validation-for="l2voltageVyn" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="l3voltageVbn" class="form-label"></label>
+                <input asp-for="l3voltageVbn" class="form-control" />
+                <span asp-validation-for="l3voltageVbn" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="frequency" class="form-label"></label>
+                <input asp-for="frequency" class="form-control" />
+                <span asp-validation-for="frequency" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3 form-check">
+                <input class="form-check-input" asp-for="status" />
+                <label class="form-check-label" asp-for="status"></label>
+            </div>
+
+            <div class="d-flex justify-content-between">
+                <input type="submit" value="Create" class="btn btn-primary" />
+                <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

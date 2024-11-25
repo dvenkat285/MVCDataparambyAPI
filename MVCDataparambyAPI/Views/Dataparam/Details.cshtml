@@ -1,0 +1,138 @@
+﻿@model MVCDataparambyAPI.Models.Dataparam
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Dataparam</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.did)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.did)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.meterId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.meterId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.dtrid)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.dtrid)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.rtc)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.rtc)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.currentRphase)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.currentRphase)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.currentYphase)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.currentYphase)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.currentBphase)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.currentBphase)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.powerAlert)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.powerAlert)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.srlcdoorsStatus)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.srlcdoorsStatus)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.oilLevel)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.oilLevel)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.srlcoilLevel)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.srlcoilLevel)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.srlcoilTemperature)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.srlcoilTemperature)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.srlcsurfaceTemperature)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.srlcsurfaceTemperature)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.srlcambtemperature)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.srlcambtemperature)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.relayAlert)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.relayAlert)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.l1voltageVrn)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.l1voltageVrn)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.l2voltageVyn)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.l2voltageVyn)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.l3voltageVbn)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.l3voltageVbn)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.frequency)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.frequency)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.status)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.status)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { did = Model.did }) |
+    <a asp-action="Index">Back to List</a>
+</div>
